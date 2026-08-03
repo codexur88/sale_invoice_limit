@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_order_form_invoice_limit" model="ir.ui.view">
+        <field name="name">sale.order.form.invoice.limit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <!-- New dedicated tab for the invoice limit, kept separate from
+                 the notebook to avoid xpath ambiguity with fields that are
+                 duplicated inside the order_line sub-view -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Invoice Limit" name="invoice_limit_page">
+                    <group>
+                        <field name="invoice_limit_amount"
+                               widget="invoice_limit_slider"
+                               options="{'max_field': 'amount_total'}"/>
+                        <field name="amount_invoiced"
+                               invisible="not invoice_limit_amount"
+                               readonly="1"/>
+                        <field name="amount_invoice_remaining"
+                               invisible="not invoice_limit_amount"
+                               readonly="1"
+                               decoration-danger="amount_invoice_remaining &lt;= 0"
+                               decoration-warning="amount_invoice_remaining &gt; 0"/>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

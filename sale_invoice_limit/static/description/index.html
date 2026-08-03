@@ -1,0 +1,91 @@
+<section class="oe_container">
+    <div class="row">
+        <div class="col-12 text-center" style="margin: 32px 0;">
+            <h2>Sale Order Invoice Limit</h2>
+            <h4 class="text-muted">
+                Cap how much of a sales order can be invoiced, enforced at
+                the right moment, with a visual drag-slider control.
+            </h4>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Why you need this</h3>
+            <p>
+                By default, a sales order in Odoo can be invoiced up to its
+                full total at any time. Many businesses need a hard
+                ceiling instead: staged payments, partial deliveries,
+                credit control, or dealer/franchise terms. An order worth
+                3,000 should only be invoiceable up to 1,500, for example,
+                until someone deliberately raises or removes that limit.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Visual slider control</h4>
+            <p>
+                Set the invoice limit by dragging a slider, with tick
+                marks scaled to the order's own total, instead of typing a
+                raw number into a plain field. Dragging is fully local to
+                the browser while in progress, so the handle tracks the
+                mouse instantly and only writes to the record on release.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h4>Enforced at the right moment</h4>
+            <p>
+                Creating a draft invoice is never blocked, so a user can
+                always open the draft and adjust amounts. The limit is
+                checked when the invoice is posted/confirmed - if it would
+                exceed the order's remaining limit, Odoo blocks the post
+                action with a clear message and keeps the invoice
+                editable in Draft.
+            </p>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 24px;">
+        <div class="col-md-6">
+            <h4>Grouped invoicing aware</h4>
+            <p>
+                If one invoice covers several sales orders at once, only
+                the portion attributable to each order is checked against
+                that order's own limit.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h4>Credit notes accounted for</h4>
+            <p>
+                Posted credit notes reduce the invoiced total, freeing up
+                room under the limit again automatically.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row">
+        <div class="col-12">
+            <h3>How it works</h3>
+            <ol>
+                <li>Open a sales order and go to the <b>Invoice Limit</b> tab.</li>
+                <li>Drag the slider (or type a value) to set the maximum invoiceable amount. Leave it at 0 for unrestricted invoicing.</li>
+                <li>Invoice as usual. If posting an invoice would exceed the remaining limit, Odoo blocks the post action and shows the limit, the amount already invoiced, and the maximum still allowed for that invoice.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="row">
+        <div class="col-12 text-center" style="margin: 24px 0;">
+            <p class="text-muted">Compatible with Odoo 18 Community and Enterprise, Odoo.sh and self-hosted deployments.</p>
+        </div>
+    </div>
+</section>

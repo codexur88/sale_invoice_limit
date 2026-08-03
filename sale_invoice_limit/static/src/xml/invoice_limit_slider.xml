@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="sale_invoice_limit.InvoiceLimitSlider">
+        <div class="o_invoice_limit_slider" t-att-class="{ 'o_ils_dragging': state.dragging }">
+            <div class="o_ils_pin_row">
+                <div class="o_ils_pin" t-attf-style="left: {{percent}}%;">
+                    <span t-esc="formatValue(value)"/>
+                </div>
+            </div>
+            <div class="o_ils_track"
+                 t-ref="track"
+                 t-on-pointerdown="onPointerDown">
+                <div class="o_ils_fill" t-attf-style="width: {{percent}}%;"/>
+                <div class="o_ils_handle" t-attf-style="left: {{percent}}%;"/>
+            </div>
+            <div class="o_ils_ticks">
+                <t t-foreach="ticks" t-as="tick" t-key="tick">
+                    <span class="o_ils_tick" t-esc="formatValue(tick)"/>
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>
