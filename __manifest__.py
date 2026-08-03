@@ -61,6 +61,7 @@ deployments.
             'sale_invoice_limit/static/src/js/invoice_limit_slider.js',
             'sale_invoice_limit/static/src/xml/invoice_limit_slider.xml',
             'sale_invoice_limit/static/src/scss/invoice_limit_slider.scss',
+            'static/description/banner.png'
         ],
     },
     'installable': True,
