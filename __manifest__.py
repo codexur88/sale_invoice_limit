@@ -50,7 +50,7 @@ How it works
 Compatible with Odoo 18 Community and Enterprise, Odoo.sh and self-hosted
 deployments.
     """,
-    'author': 'Eng. Yasir Habeeb',
+    'author': 'Codexui',
     'website': '',
     'depends': ['sale', 'account'],
     'data': [
@@ -66,4 +66,6 @@ deployments.
     'installable': True,
     'application': False,
     'license': 'LGPL-3',
+    'price': 149.0,
+    'currency': 'EUR',
 }
