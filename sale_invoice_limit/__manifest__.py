@@ -3,6 +3,7 @@
     'name': 'Sale Order Invoice Limit',
     'version': '18.0.1.0.0',
     'category': 'Sales',
+     'images': ['static/description/banner.png'],
     'summary': 'Cap the maximum amount that can be invoiced on a sales order, with a visual slider control.',
     'description': """
 Sale Order Invoice Limit
