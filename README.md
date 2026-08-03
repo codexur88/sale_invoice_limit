@@ -5,7 +5,7 @@ the right moment in the workflow, with a visual drag-slider control.
 
 **Odoo version:** 18.0
 **License:** LGPL-3
-**Author:** Eng. Yasir Habeeb
+**Author:** Codexui
 
 ## Why
 
