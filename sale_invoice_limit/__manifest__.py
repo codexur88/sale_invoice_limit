@@ -50,7 +50,7 @@ How it works
 Compatible with Odoo 18 Community and Enterprise, Odoo.sh and self-hosted
 deployments.
     """,
-    'author': 'Eng. Yasir Habeeb',
+    'author': 'Codexui',
     'website': '',
     'depends': ['sale', 'account'],
     'data': [
@@ -61,9 +61,12 @@ deployments.
             'sale_invoice_limit/static/src/js/invoice_limit_slider.js',
             'sale_invoice_limit/static/src/xml/invoice_limit_slider.xml',
             'sale_invoice_limit/static/src/scss/invoice_limit_slider.scss',
+            'static/description/banner.png'
         ],
     },
     'installable': True,
     'application': False,
     'license': 'LGPL-3',
+    'price': 149.0,
+    'currency': 'EUR',
 }
